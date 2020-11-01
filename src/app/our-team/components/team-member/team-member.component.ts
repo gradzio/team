@@ -9,4 +9,7 @@ import { TeamMember } from 'src/app/core/models/presentation/our-team';
 export class TeamMemberComponent {
   @Input() teamMember: TeamMember;
   constructor() {}
+  mailto(email: string): string {
+    return `mailto:${email}`;
+  }
 }

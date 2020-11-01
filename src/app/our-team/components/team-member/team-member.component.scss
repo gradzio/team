@@ -1,0 +1,41 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.image-wrapper {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  & > img {
+    width: 100%;
+    height: auto;
+  }
+}
+.bio {
+  padding: 20px 12px;
+  font-size: 12px;
+  .name {
+    margin: 0;
+    color: var(--primary-blue);
+  }
+  p {
+    margin: 0;
+    &.position {
+      margin-bottom: 24px;
+      color: var(--primary-gray);
+    }
+    &.email {
+      margin-bottom: 4px;
+      & > a {
+        color: #00b2e8;
+        &:link {
+          text-decoration: none;
+        }
+      }
+    }
+    &.phone {
+      color: var(--primary-gray);
+    }
+  }
+}

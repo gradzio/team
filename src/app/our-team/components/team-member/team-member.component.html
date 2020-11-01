@@ -1,7 +1,11 @@
-<div>
+<div class="image-wrapper">
   <img [src]="teamMember.images.w200" />
-  <h3>{{ teamMember.name }}</h3>
-  <p>{{ teamMember.position }}</p>
-  <p>{{ teamMember.email }}</p>
-  <p>{{ teamMember.phoneNumber }}</p>
+</div>
+<div class="bio">
+  <h3 class="name">{{ teamMember.name }}</h3>
+  <p class="position">{{ teamMember.position }}</p>
+  <p class="email">
+    <a [href]="mailto(teamMember.email)">{{ teamMember.email }}</a>
+  </p>
+  <p class="phone">{{ teamMember.phoneNumber }}</p>
 </div>
