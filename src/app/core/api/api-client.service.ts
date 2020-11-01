@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from './../../../environments/environment';
-import { TeamMembersResponse } from '../models/api/team-members-response';
+import { OurTeamResponse } from '../models/api/our-team-response';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +10,7 @@ import { TeamMembersResponse } from '../models/api/team-members-response';
 export class ApiClientService {
   constructor(private httpClient: HttpClient) {}
 
-  fetchTeamMembers(): Observable<TeamMembersResponse> {
-    return this.httpClient.get<TeamMembersResponse>(environment.baseUrl);
+  fetchTeamMembers(): Observable<OurTeamResponse> {
+    return this.httpClient.get<OurTeamResponse>(environment.baseUrl);
   }
 }

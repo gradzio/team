@@ -1,13 +1,4 @@
-type Url = string;
-type Id = string;
-
-export interface ImageUrls {
-  w200: Url;
-  w400: Url;
-  w1080: Url;
-  w1920: Url;
-  w2560: Url;
-}
+import { Id, Url, ImageUrls } from '../common';
 
 export interface MemberData {
   title: string;
@@ -16,15 +7,15 @@ export interface MemberData {
   text: string;
 }
 
-export interface Membar {
+export interface MembarCard {
   imageUrl: ImageUrls;
   block: MemberData;
 }
 
 export interface MemberCards {
-  first: Membar;
-  second: Membar;
-  third: Membar;
+  first: MembarCard;
+  second: MembarCard;
+  third: MembarCard;
 }
 
 export interface Attributes {
@@ -38,6 +29,6 @@ export interface Block {
   type: string;
 }
 
-export interface TeamMembersResponse {
+export interface OurTeamResponse {
   data: [Block];
 }
