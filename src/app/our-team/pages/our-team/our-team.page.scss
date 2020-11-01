@@ -13,8 +13,11 @@
 }
 
 .team-members {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @media screen and (max-width: 620px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
   & > app-team-member {
     margin: 0 8px;
   }
