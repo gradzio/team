@@ -1,5 +1,12 @@
 <div class="image-wrapper">
-  <img [src]="teamMember.images.w200" />
+  <picture>
+    <source media="(min-width: 2500px)" [srcset]="teamMember.images.w2560" />
+    <source media="(min-width: 1920px)" [srcset]="teamMember.images.w1920" />
+    <source media="(min-width: 1080px)" [srcset]="teamMember.images.w1080" />
+    <source media="(min-width: 400px)" [srcset]="teamMember.images.w400" />
+    <source media="(min-width: 200px)" [srcset]="teamMember.images.w200" />
+    <img [src]="teamMember.images.w200" />
+  </picture>
 </div>
 <div class="bio">
   <h3 class="name">{{ teamMember.name }}</h3>
