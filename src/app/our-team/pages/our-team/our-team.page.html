@@ -1,7 +1,7 @@
 <div *ngIf="!isLoading; else loadingContent">
-  <h1>{{ title }}</h1>
+  <h1 class="title">{{ title }}</h1>
   <div>
-    <app-team-member *ngFor="let tm of teamMembers" teamMember="tm"></app-team-member>
+    <app-team-member *ngFor="let tm of teamMembers" [teamMember]="tm"></app-team-member>
   </div>
 </div>
 
