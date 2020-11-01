@@ -8,7 +8,8 @@ export interface TeamMember {
   email: Email;
   phoneNumber: string;
 }
-export interface OurTeamPage {
+
+export interface OurTeam {
   title: string;
   teamMembers: TeamMember[];
 }

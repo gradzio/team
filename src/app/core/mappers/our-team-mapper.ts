@@ -1,7 +1,7 @@
-import { OurTeamPage, TeamMember } from '../models/presentation/our-team';
+import { OurTeam, TeamMember } from '../models/presentation/our-team';
 import { OurTeamResponse, MemberCards, MembarCard } from '../models/api/our-team-response';
 
-export function mapToOurTeamPage(apiResponse: OurTeamResponse): OurTeamPage {
+export function mapToOurTeam(apiResponse: OurTeamResponse): OurTeam {
   const teamMembers = mapToTeamMembers(apiResponse.data[0].attributes.memberCards);
   return {
     title: apiResponse.data[0].attributes.title,

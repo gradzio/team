@@ -1,1 +1,10 @@
-<p>our-team works!</p>
+<div *ngIf="!isLoading; else loadingContent">
+  <h1>{{ title }}</h1>
+  <div>
+    <app-team-member *ngFor="let tm of teamMembers" teamMember="tm"></app-team-member>
+  </div>
+</div>
+
+<ng-template #loadingContent>
+  <div>Loading...</div>
+</ng-template>
